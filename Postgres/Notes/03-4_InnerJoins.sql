@@ -1,3 +1,4 @@
+-- northwind database is used
 -- generate report that gives details like company name,orderdate and ship country for each order
 
 select "CompanyName","OrderDate","ShipCountry"
