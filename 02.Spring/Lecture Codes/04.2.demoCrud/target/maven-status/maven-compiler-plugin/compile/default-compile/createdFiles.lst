@@ -1,0 +1,5 @@
+com/infosys/democrud/beans/Batches.class
+com/infosys/democrud/repo/BatchRepo.class
+com/infosys/democrud/services/BatchServices.class
+com/infosys/democrud/services/BatchServiceInterface.class
+com/infosys/democrud/Application.class

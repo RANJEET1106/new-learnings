@@ -46,7 +46,10 @@ public class Application implements CommandLineRunner {
         System.out.println("Enter 6 to search with batch name");
         System.out.println("Enter 7 to find by start date and end date");
         System.out.println("Enter 8 to delete batch");
-
+        System.out.println("Enter 9 to fetch all batches using jpql");
+        System.out.println("Enter 10 to fetch batch by start date and name using jpql");
+        System.out.println("Enter 11 to fetch all batches using native query language");
+        System.out.println("Enter 12 to fetch batch by end date and ID using native query language");
         int operation = scanner.nextInt();
         switch (operation) {
             case 1:
@@ -120,6 +123,39 @@ public class Application implements CommandLineRunner {
                 System.out.println("Enter batch id to delete");
                 int deleteId = scanner.nextInt();
                 batchServices.deleteBatchById(deleteId);
+                break;
+
+            case 9:
+                List<Batches> batches9=batchServices.findAllBatchesByBatchesUsingQuery();
+                batches9.forEach(batch2->System.out.println(batch2));
+                break;
+
+            case 10:
+
+                System.out.println("Enter batch Name");
+                String batchName10 = scanner.next();
+                System.out.println("Enter batch start date");
+                String startDate10 = scanner.next();
+                Batches batch10 = batchServices.showBatcheDetailsOnBasisOfStartDate(startDate10,batchName10);
+                if(batch10!=null){
+                    System.out.println(batch10.toString());
+                }
+                break;
+
+            case 11:
+                List<Batches> batches11=batchServices.showAllBatchesUsingNativeQuery();
+                batches11.forEach(batch11->System.out.println(batch11));
+                break;
+
+            case 12:
+                System.out.println("Enter batch ID");
+                Integer batchID12 = scanner.nextInt();
+                System.out.println("Enter batch end date");
+                String endDate12 = scanner.next();
+                Batches batch12 = batchServices.showBatcheDetailsOnBasisOfEndDateNativeQuery(batchID12,endDate12);
+                if(batch12!=null){
+                    System.out.println(batch12.toString());
+                }
                 break;
 
             default:

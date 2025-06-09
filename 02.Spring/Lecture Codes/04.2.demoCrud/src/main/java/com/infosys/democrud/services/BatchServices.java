@@ -69,4 +69,26 @@ public class BatchServices implements BatchServiceInterface {
     public List<Batches> findAllBatchesByBatchStartDateAndBatchEndDate(String startDate, String endDate) {
         return batchRepo.findByBatchStartDateAndBatchEndDate(startDate, endDate);
     }
+
+    @Override
+    public List<Batches> findAllBatchesByBatchesUsingQuery() {
+        return batchRepo.findAllBatches();
+    }
+
+    @Override
+    public Batches showBatcheDetailsOnBasisOfStartDate(String startDate, String name) {
+        return batchRepo.showBatchOnBasisOfStartDateAndName(startDate, name);
+    }
+
+    @Override
+    public List<Batches> showAllBatchesUsingNativeQuery() {
+        return batchRepo.findAllBatchesUsingNativeQuery();
+
+
+    }
+
+    @Override
+    public Batches showBatcheDetailsOnBasisOfEndDateNativeQuery(Integer ID, String endDate) {
+        return batchRepo.showAllBatchesOnBasisOfBatchIdAndEndDate(ID, endDate);
+    }
 }

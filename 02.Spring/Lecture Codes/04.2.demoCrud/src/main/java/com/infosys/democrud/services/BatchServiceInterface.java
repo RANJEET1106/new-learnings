@@ -16,5 +16,9 @@ public interface BatchServiceInterface {
 
     public List<Batches> findOnBasisOfBatchName(String batchName);
     public List<Batches> findAllBatchesByBatchStartDateAndBatchEndDate(String startDate, String endDate);
+    public List<Batches> findAllBatchesByBatchesUsingQuery();
+    public Batches showBatcheDetailsOnBasisOfStartDate(String startDate, String name);
+    public List<Batches> showAllBatchesUsingNativeQuery();
 
+    public Batches showBatcheDetailsOnBasisOfEndDateNativeQuery(Integer ID,String endDate);
 }
