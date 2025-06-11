@@ -29,4 +29,5 @@ public List<Batches> findAllBatchesUsingNativeQuery();
 @Query(value = "select * from batch where batch_id= :id and batch_end_date = :endDate",nativeQuery = true)
     public Batches showAllBatchesOnBasisOfBatchIdAndEndDate(@Param("id") Integer batchId, @Param("endDate") String endDate);
 
+
 }

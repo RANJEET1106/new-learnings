@@ -1,7 +1,10 @@
 package com.infosys.democrud;
 
 import com.infosys.democrud.beans.Batches;
+import com.infosys.democrud.beans.Laptop;
+import com.infosys.democrud.beans.Student;
 import com.infosys.democrud.services.BatchServices;
+import com.infosys.democrud.services.StudentService;
 import org.hibernate.engine.jdbc.batch.spi.Batch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,6 +28,8 @@ public class Application implements CommandLineRunner {
 
     @Autowired
     BatchServices batchServices;
+    @Autowired
+    StudentService studentService;
     @Value("${spring.application.name}")
     private String appName;
 
@@ -50,6 +55,8 @@ public class Application implements CommandLineRunner {
         System.out.println("Enter 10 to fetch batch by start date and name using jpql");
         System.out.println("Enter 11 to fetch all batches using native query language");
         System.out.println("Enter 12 to fetch batch by end date and ID using native query language");
+        System.out.println("Enter 13 to fetch all student using named query language");
+        System.out.println("Enter 14 to fetch student by email using named query language");
         int operation = scanner.nextInt();
         switch (operation) {
             case 1:
@@ -158,6 +165,31 @@ public class Application implements CommandLineRunner {
                 }
                 break;
 
+            case 13:
+                List<Student> students= studentService.showAllStudents();
+                students.forEach(student1->System.out.println(student1.toString()));
+                break;
+
+            case 14:
+                System.out.println("Enter the email");
+                String email = scanner.next();
+                Student student= studentService.findByEmail(email);
+                if(student!=null){
+                    System.out.println(student.toString());
+                }
+                else {
+                    System.out.println("Email not found");
+                }
+                break;
+
+            case 15:
+                Laptop laptop = new Laptop();
+                laptop.setMacId(123456);
+                laptop.setModelName("HP Probook");
+                Student s= new Student("Ranjeet","ranjeet@infosys.com");
+                s.setLaptop(laptop);
+                System.out.println("Student saved");
+                break;
             default:
                 System.out.println("Please enter a valid operation");
                 break;
