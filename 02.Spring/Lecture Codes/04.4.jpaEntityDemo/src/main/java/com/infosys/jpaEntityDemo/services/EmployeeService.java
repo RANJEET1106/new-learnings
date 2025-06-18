@@ -2,12 +2,10 @@ package com.infosys.jpaEntityDemo.services;
 
 import com.infosys.jpaEntityDemo.beans.Employee;
 import com.infosys.jpaEntityDemo.dao.EmployeeDao;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.PersistenceUnit;
+import jakarta.persistence.*;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Scanner;
 
 @Service
@@ -69,6 +67,53 @@ public class EmployeeService implements EmployeeDao {
 
     @Override
     public void removeEmployee(int id) {
+        EntityManager entityManager = emf.createEntityManager(); // create entity manager object
+//        begin transaction to make changes
+        entityManager.getTransaction().begin();
+//        persist() is used to save object entity
+        Employee employee = entityManager.find(Employee.class, id);
+        if(employee != null) {
+            entityManager.remove(employee);
+            System.out.println("Employee removed successfully "+employee.toString());
+        }
+        else{
+            System.out.println("Employee not found");
+        }
+        entityManager.getTransaction().commit();
+        entityManager.close();
+    }
 
+    @Override
+    public List<Employee> findAllEmployees() {
+        String query="Select e from Employee e";
+        EntityManager entityManager = emf.createEntityManager();
+        TypedQuery<Employee> empList = entityManager.createQuery(query,Employee.class);
+        return empList.getResultList();
+    }
+
+    @Override
+    public void findByEmail(String email) {
+        EntityManager entityManager = emf.createEntityManager();
+        List<Employee> employeeList=  entityManager.createNamedQuery("Employee.findByEmail",Employee.class)
+                .setParameter("email", email).getResultList();
+        if(employeeList.size()>0) {
+            employeeList.forEach(employee1 -> System.out.println(employee1.toString()));
+        }
+        else{
+            System.out.println("Employee not found");
+        }
+    }
+
+    @Override
+    public void validateEmployee(int id, String email) {
+        EntityManager entityManager = emf.createEntityManager();
+        entityManager.getTransaction().begin();
+        Employee employee = entityManager.find(Employee.class, id);
+        if(employee != null && employee.getEmpEmail().equals(email)) {
+            System.out.println("Employee validated seuccessfully "+employee.toString());
+        }
+        else {
+            System.out.println("Employee not found");
+        }
     }
 }

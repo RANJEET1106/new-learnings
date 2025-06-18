@@ -10,6 +10,11 @@ import lombok.Setter;
 @Table(name= "employee2")
 @NoArgsConstructor
 @Data
+
+@NamedQuery(
+        name = "Employee.findByEmail",
+        query = "select e from Employee e where e.empEmail= : email"
+)
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

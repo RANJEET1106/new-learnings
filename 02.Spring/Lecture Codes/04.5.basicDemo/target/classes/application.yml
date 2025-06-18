@@ -1,0 +1,28 @@
+#Indentation
+#  One use space
+#  tabs not allowed. Use consistant space : usually 2 spaces per level for nested structure
+#
+#  key value pair key:value be followed by a space and keys are case sensitives
+#  List or sequences use a dash + space for each item
+#
+#  when working with scalers(string,number,boolean)
+#  no quotes needed for simple string, number and boolean
+#  quotes are needed when containing spaacial characters(:, $,@)
+#  boolean : true or false (lowercase)
+
+
+app:
+  app-name: "04.5.basicDemo"
+  greeting: "good evining"
+
+server:
+  port: 8082
+
+#  ... to separate or start & YAML document
+#  ... optionally to end one
+#
+#  items:
+#    -one
+#    -two
+#
+#  items1: [one,two]
