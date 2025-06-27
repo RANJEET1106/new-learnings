@@ -2,6 +2,7 @@ package com.infosys.postgrerest.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +22,6 @@ public class Course {
     @Size(min=5, message = "Course name should be minn 5 chars")
     private String courseName;
 
-    @NotBlank(message = "Duration is required")
+    @NotNull(message = "Duration is required")
     private Integer duration;
 }
