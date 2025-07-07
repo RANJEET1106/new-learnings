@@ -1,0 +1,6 @@
+com/infosys/deptrest/controller/DepartmentController.class
+com/infosys/deptrest/Application.class
+com/infosys/deptrest/model/Departments.class
+com/infosys/deptrest/service/DepartmentService.class
+com/infosys/deptrest/service/DepartmentServiceImpl.class
+com/infosys/deptrest/repository/DepartmentRepository.class

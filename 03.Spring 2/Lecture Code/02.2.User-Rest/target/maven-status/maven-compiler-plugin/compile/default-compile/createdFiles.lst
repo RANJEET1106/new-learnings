@@ -1,0 +1,9 @@
+com/infosys/userrest/service/UserInfoService.class
+com/infosys/userrest/model/UserInfoDto.class
+com/infosys/userrest/repository/UserInterfaceRepository.class
+com/infosys/userrest/controller/UserInfoController.class
+com/infosys/userrest/service/UserInfoServiceImpl.class
+com/infosys/userrest/model/UserInfo.class
+com/infosys/userrest/model/ResponseDto.class
+com/infosys/userrest/Application.class
+com/infosys/userrest/model/DepartmentDto.class
