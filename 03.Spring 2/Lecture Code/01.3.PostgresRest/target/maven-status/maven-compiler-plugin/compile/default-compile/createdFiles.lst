@@ -1,9 +1,0 @@
-com/infosys/postgrerest/Application.class
-com/infosys/postgrerest/Exception/GlobalExceptionHandler.class
-com/infosys/postgrerest/controller/MyCourseController.class
-com/infosys/postgrerest/repository/CourseRepository.class
-com/infosys/postgrerest/Exception/CourseException.class
-com/infosys/postgrerest/service/impl/CourseServiceImpl.class
-com/infosys/postgrerest/service/CourseService.class
-com/infosys/postgrerest/model/CourseResponse.class
-com/infosys/postgrerest/model/Course.class

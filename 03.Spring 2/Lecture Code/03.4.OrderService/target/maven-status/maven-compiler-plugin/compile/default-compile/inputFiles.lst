@@ -1,7 +1,0 @@
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/03.4.OrderService/src/main/java/com/infosys/demo_OrederService/DemoOrederServiceApplication.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/03.4.OrderService/src/main/java/com/infosys/demo_OrederService/config/WebClientConfig.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/03.4.OrderService/src/main/java/com/infosys/demo_OrederService/controller/OrderController.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/03.4.OrderService/src/main/java/com/infosys/demo_OrederService/model/Order.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/03.4.OrderService/src/main/java/com/infosys/demo_OrederService/repo/OrderRepository.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/03.4.OrderService/src/main/java/com/infosys/demo_OrederService/repo/OrderResponseDTO.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/03.4.OrderService/src/main/java/com/infosys/demo_OrederService/repo/ProductDTO.java

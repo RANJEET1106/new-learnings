@@ -1,9 +1,0 @@
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/02.2.User-Rest/src/main/java/com/infosys/userrest/Application.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/02.2.User-Rest/src/main/java/com/infosys/userrest/controller/UserInfoController.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/02.2.User-Rest/src/main/java/com/infosys/userrest/model/DepartmentDto.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/02.2.User-Rest/src/main/java/com/infosys/userrest/model/ResponseDto.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/02.2.User-Rest/src/main/java/com/infosys/userrest/model/UserInfo.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/02.2.User-Rest/src/main/java/com/infosys/userrest/model/UserInfoDto.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/02.2.User-Rest/src/main/java/com/infosys/userrest/repository/UserInterfaceRepository.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/02.2.User-Rest/src/main/java/com/infosys/userrest/service/UserInfoService.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/02.2.User-Rest/src/main/java/com/infosys/userrest/service/UserInfoServiceImpl.java

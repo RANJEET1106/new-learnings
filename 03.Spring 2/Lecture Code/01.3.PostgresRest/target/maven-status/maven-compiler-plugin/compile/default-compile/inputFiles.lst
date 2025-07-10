@@ -1,9 +1,0 @@
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/01.3.PostgresRest/src/main/java/com/infosys/postgrerest/Application.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/01.3.PostgresRest/src/main/java/com/infosys/postgrerest/Exception/CourseException.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/01.3.PostgresRest/src/main/java/com/infosys/postgrerest/Exception/GlobalExceptionHandler.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/01.3.PostgresRest/src/main/java/com/infosys/postgrerest/controller/MyCourseController.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/01.3.PostgresRest/src/main/java/com/infosys/postgrerest/model/Course.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/01.3.PostgresRest/src/main/java/com/infosys/postgrerest/model/CourseResponse.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/01.3.PostgresRest/src/main/java/com/infosys/postgrerest/repository/CourseRepository.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/01.3.PostgresRest/src/main/java/com/infosys/postgrerest/service/CourseService.java
-/home/ranjeet/4.Edgeverve/03.Spring 2/Lecture Code/01.3.PostgresRest/src/main/java/com/infosys/postgrerest/service/impl/CourseServiceImpl.java

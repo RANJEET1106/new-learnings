@@ -1,7 +1,0 @@
-com/infosys/demo_OrederService/model/Order.class
-com/infosys/demo_OrederService/repo/OrderRepository.class
-com/infosys/demo_OrederService/repo/OrderResponseDTO.class
-com/infosys/demo_OrederService/repo/ProductDTO.class
-com/infosys/demo_OrederService/config/WebClientConfig.class
-com/infosys/demo_OrederService/controller/OrderController.class
-com/infosys/demo_OrederService/DemoOrederServiceApplication.class
