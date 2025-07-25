@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <Appenders>
+        <console name="console" target="SYSTEM-OUT">
+            <patternLayout pattern="%d %t %c %msg %n"/>
+        </console>
+        <File name="File" filename="MyApp.log">
+            <patternLayout pattern="%d {yyyy-mm-dd HH:MM;SS} [%t] %-5level %-50c{1.} - %msg%n"/>
+
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="trase">
+            <AppenderRef ref="console"/>
+            <AppenderRef ref="File"/>
+        </Root>
+    </Loggers>
+</configuration>
