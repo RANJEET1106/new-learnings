@@ -1,0 +1,6 @@
+select * from book3;
+select * from author3;
+select * from publisher3;
+select * from library_branch3;
+select * from book_author3;
+select * from book_branch3;
