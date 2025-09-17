@@ -1,0 +1,22 @@
+h1{
+    color: aqua;
+    font-family: 'Courier New', Courier, monospace';
+
+}
+
+#hd2{
+    color: orange;
+    font-family: 'Courier New', Courier, monospace';
+
+}
+
+.class1{
+    color: green;
+    font-family: 'Courier New', Courier, monospace';
+
+}
+
+p{
+    color: red;
+    font-size: 20px;
+}
