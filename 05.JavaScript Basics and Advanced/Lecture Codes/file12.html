@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">Paragraph 1</p>
+    <p class="p1">Paragraph 2</p>
+    <p class="p1">Para3</p>
+    <h2>Hello</h2>
+    <h2>Welcome</h2>
+    <button onclick="changeMe()">Change Me</button>
+    <button onclick="change()">Change</button>
+    <button id="btn">Change on Click</button>
+    <button id="btn1">Give alert</button>
+
+    <input type="text" id="inputbox", placeholder="Type Here">
+    <script>
+        function changeMe(){
+            // document.getElementById("para1").innerText="Welcome"
+            // document.getElementsByClassName("p1")[0].style.background='green'
+            let heads=document.getElementsByTagName("h2")
+            for(let i=0;i<heads.length;i++){
+                heads[i].style.backgroundColor="red"
+            }
+            heads[1].innerText="Bye"
+        }
+
+        let h=document.querySelector('.p1'); // select only first element
+        // for class ('.classname')
+        // for id ('#id namee')
+        // for tag('tag name')
+
+        h.style.background='blue'
+
+        let h1=document.querySelectorAll('h2'); // select all elements
+        h1.forEach(n=> n.style.color='yellow')
+
+        function change(){
+            document.getElementById('para').innerHTML='New <b> Content </b>'
+        }
+
+        document.getElementById('btn').onclick=function(){
+            document.getElementById('para').innerHTML='New <b> Content </b>'
+        }
+
+        let b=document.getElementById('btn1');
+        // b.addEventListener("click",()=>{
+        //     alert("Clicked")
+        // })
+        b.addEventListener('dblclick',()=>alert("Double clicked"))
+        b.addEventListener('mouseover',()=> b.style.background='red')
+        b.addEventListener('mouseout',()=> b.style.background='')
+
+        document.getElementById('inputbox').addEventListener('keydown',(e)=>{
+            console.log('pressed:'+e.key)
+        })
+
+        document.getElementById('inputbox').addEventListener('keyup',(e)=>{
+            console.log('released:'+e.key)
+        })
+    </script>
+</body>
+
+</html>
