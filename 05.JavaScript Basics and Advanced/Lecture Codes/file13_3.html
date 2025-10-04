@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local Storage Demo</h1>
+    <input type="text" id="username" >
+    <button onclick="saveData()">Save</button>
+    <button onclick="loadData()">Load</button>
+    <button onclick="removeData()">Remove</button>
+    <button onclick="clearAll()">Clear All</button>
+    <button onclick="showKeys()">Show Keys</button>
+    <p id="result"></p>
+    <!-- <div id="keys"></div> -->
+     <p id="keys"></p>
+    <script>
+        function saveData(){
+            let name=document.getElementById("username").value;
+            localStorage.setItem("username",name)
+            alert("name saved to local storage")
+        }
+
+        function loadData(){
+            let name=localStorage.getItem("username");
+            document.getElementById("result").innerText=name
+            ?"Hello "+name :"No Data found"
+        }
+
+        function removeData(){
+            localStorage.removeItem("username")
+            alert("name is removed")
+        }
+
+        function clearAll(){
+            localStorage.clear()
+            alert("All Data cleared")
+        }
+
+        function showKeys(){
+            let keyLists="";
+            for(let i=0; i< localStorage.length; i++){
+                let keyName = localStorage.key(i)
+                let value = localStorage.getItem(keyName)
+                keyLists+="Key: "+keyName+" -> Value: "+value+"<br>"
+            }
+            keyLists+="<br> Total item stored: "+localStorage.length;
+            document.getElementById("keys").innerHTML=keyLists;
+        }
+    </script>
+</body>
+</html>

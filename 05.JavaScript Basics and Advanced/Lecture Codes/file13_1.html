@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Basic Form</h1>
+    <form id="frm">
+        <label>Enter Name</label>
+        <input type="text" id="name" required>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const form=document.getElementById("frm")
+        form.addEventListener("submit", function(event){
+            event.preventDefault(); // prevent resetting the form
+            const name = document.getElementById("name").value;
+            alert("Form Submitted: Name: "+name)
+        })
+    </script>
+</body>
+</html>

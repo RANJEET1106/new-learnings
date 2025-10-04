@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Form Validation</title>
+</head>
+<body>
+ <form id="myForm">
+  <label>Full Name:
+   <input type="text" id="fullname" name="fullname" required>
+  </label><br/><br/>
+
+<label>Age:
+   <input type="text" id="age" name="age" required>
+  </label><br/><br/>
+
+<label>Phone:
+   <input type="text" id="phone" name="phone" required>
+  </label><br/><br/>
+
+<label>Email:
+   <input type="text" id="email" name="email" required>
+  </label><br/><br/>
+
+<label>Password:
+   <input type="password" id="password" name="password" required>
+  </label><br/><br/>
+
+<input type="submit" value="Submit">
+ </form>
+
+<script>
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+   event.preventDefault();
+
+const fullname = document.getElementById('fullname').value;
+   const age = document.getElementById('age').value;
+   const phone = document.getElementById('phone').value;
+   const email = document.getElementById('email').value;
+   const password = document.getElementById('password').value;
+
+const nameRegex = /^[A-Za-z ]{3,}$/;
+   const ageRegex = /^(?:1[89]|[2-9][0-9])$/;  
+   const phoneRegex = /^[6-9][0-9]{9}$/;
+   const emailRegex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+   const passwordRegex = /^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]{6,}$/;
+
+if (!nameRegex.test(fullname)) return;
+   if (!ageRegex.test(age)) return;
+   if (!phoneRegex.test(phone)) return;
+   if (!emailRegex.test(email)) return;
+   if (!passwordRegex.test(password)) return;
+
+alert("Form submitted successfully!");
+  });
+ </script>
+</body>
+</html>
