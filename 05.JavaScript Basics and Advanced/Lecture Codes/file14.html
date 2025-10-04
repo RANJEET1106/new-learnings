@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="askPermission()">Ask Permission</button>
+    <button onclick="showNotification()">Show Notification</button>
+    <button onclick="remind()">Remind</button>
+    <script>
+        // Function to check is notification is allowed or not
+
+
+        // if("Notification" in window){
+        //     document.write("Supported Notification")
+        // }else{
+        //     document.write("Not Support Notification")
+        // }
+
+        function askPermission() {
+            Notification.requestPermission().then(permission => {
+                alert("Permission is " + permission)
+            })
+        }
+
+        function showNotification() {
+            if (Notification.permission === 'granted') {
+                new Notification("hello world", {
+                    body: "First Notification"
+                });
+            } else {
+                alert("Please allow notification first")
+            }
+        }
+
+        function remind() {
+            setInterval(() => {
+                if (Notification.permission === 'granted') {
+                    new Notification("Reminder", {
+                        body: "Reminder Notification"
+                    });
+                } else {
+                    alert("Please allow notification first")
+                }
+            },5000)
+        }
+    </script>
+</body>
+
+</html>
