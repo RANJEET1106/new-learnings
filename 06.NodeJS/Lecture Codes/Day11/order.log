@@ -1,0 +1,6 @@
+{
+  message: 'order Failed',
+  level: 'error',
+  service: 'OrderService',
+  timestamp: '2025-11-04T13:01:52.242Z'
+}

@@ -1,0 +1,44 @@
+{"level":"error","message":"An error log"}
+{"level":"info","message":"An info log"}
+{"level":"error","message":"An error log"}
+[32minfo[39m:    An info log
+[31merror[39m:   An error log
+2025-11-03T13:51:33.470Z,info,An info log
+2025-11-03T13:51:33.472Z,error,An error log
+{"level":"info","message":"An info log","timestamp":"2025-11-03T13:58:33.131Z"}
+{"level":"error","message":"An error log","timestamp":"2025-11-03T13:58:33.133Z"}
+{"isAuthenticated":false,"level":"info","message":"An info log","method":"GET","timestamp":"2025-11-03T13:59:22.590Z"}
+{"isAuthenticated":false,"level":"error","message":"An error log","method":"GET","timestamp":"2025-11-03T13:59:22.592Z"}
+{"isAuthenticated":false,"level":"error","message":"An error log","method":"GET","timestamp":"2025-11-03T14:00:51.462Z"}
+{"isAuthenticated":false,"level":"info","message":"An info log","method":"GET","timestamp":"2025-11-03T14:01:37.054Z"}
+{"isAuthenticated":false,"level":"error","message":"An error log","method":"GET","timestamp":"2025-11-03T14:01:37.056Z"}
+{"isAuthenticated":false,"level":"error","message":"An error log","method":"GET","timestamp":"2025-11-03T14:04:06.272Z"}
+{
+  method: 'GET',
+  isAuthenticated: false,
+  message: 'An error log',
+  level: 'error',
+  timestamp: '2025-11-03T14:07:10.632Z'
+}
+{
+  method: 'GET',
+  isAuthenticated: false,
+  message: 'An error log',
+  level: 'error',
+  timestamp: '2025-11-03T14:09:15.967Z'
+}
+{
+  method: 'GET',
+  isAuthenticated: false,
+  level: 'error',
+  message: 'An error log 504 Gateway Timed Out',
+  stack: 'Error: 504 Gateway Timed Out\n' +
+    '    at Object.<anonymous> (/home/ranjeet/4.Edgeverve/06.NodeJS/Lecture Codes/Day11/app.js:22:35)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1529:14)\n' +
+    '    at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1275:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:1096:12)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)\n' +
+    '    at node:internal/main/run_main_module:28:49',
+  timestamp: '2025-11-03T14:09:41.203Z'
+}

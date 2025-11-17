@@ -1,0 +1,6 @@
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-11-04T13:46:34.682Z"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-11-04T13:47:23.306Z"}
+{"level":"info","message":"User  RANJEET register successfully","timestamp":"2025-11-04T13:48:29.862Z"}
+{"level":"error","message":"Validation warning: Invalid Email","timestamp":"2025-11-04T13:48:40.056Z"}
+{"level":"error","message":"unhandeled error: Unexpected token ',', ...\"username\":,\n        \"... is not valid JSON","timestamp":"2025-11-04T13:48:56.268Z"}
+{"level":"error","message":"Validation failed: Username and Email are required","timestamp":"2025-11-04T13:49:01.106Z"}
