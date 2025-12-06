@@ -1,0 +1,41 @@
+f1 = open("file1.txt","r")
+print(f1.read())
+f1.close()
+
+f1 = open("file2.txt","w")
+f1.write("Hardwork never fails")
+f1.close()
+
+f1 = open("file2.txt","r")
+print(f1.read())
+f1.close()
+
+# f1 = open("file1.txt","r+")
+# print(f1.tell())
+# print(f1.read())
+# print(f1.tell())
+# f1.write("Practice makes man perfect")
+# print(f1.tell())
+# print(f1.read())
+# print(f1.tell())
+# f1.close()
+
+# f1 = open("file1.txt","w+")
+# f1.write("Hi Welcome")
+# f1.write("This is python session for PDA")
+# f1.seek(0)
+# print(f1.read())
+# f1.close()
+
+# f1=open("file3.txt","a+")
+# f1.write("Hello students")
+# f1.seek(0)
+# print(f1.read())
+# f1.close()
+
+f1=open("image.png","rb")
+f2=open("image2.png","wb")
+for i in f1:
+    f2.write(i)
+f1.seek(0)
+print(f1.read())
